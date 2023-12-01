@@ -4,10 +4,22 @@
 		<meta charset="utf-8" />
 	</head>
 	<body>
-		<pip-element>
-			<b>Hi Lit!</b>
+		<button id="pipButton">pip me</button>
+		<br />
+
+		<pip-element id="pip">
+			<div style="padding: 24px">
+				<b>Hi Lit!</b>
+				<test-element></test-element>
+			</div>
 		</pip-element>
 
 		<script type="module" src="../src/index.ts"></script>
+
+		<script defer>
+			pipButton.addEventListener('click', () => pip.pip());
+		</script>
+
+		<script type="module" src="./test.ts"></script>
 	</body>
 </html>
